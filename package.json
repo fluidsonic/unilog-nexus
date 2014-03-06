@@ -1,0 +1,33 @@
+{
+  "name": "unilog-nexus",
+  "version": "0.0.1",
+  "description": "Aggregates debug, nlogger and console output into unilog.",
+  "keywords": [
+    "log",
+    "logger",
+    "logging",
+    "unified",
+    "universal",
+    "aggregate",
+    "aggregated",
+    "wrap",
+    "wrapper",
+    "redirect",
+    "console",
+    "debug",
+    "nlogger"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/fluidsonic/unilog-nexus",
+  "bugs": "https://github.com/fluidsonic/unilog-nexus/issues",
+  "author": "Marc Knaup <marc.knaup@koeln.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fluidsonic/unilog-nexus.git"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "poison": "~1.0.0",
+    "unilog": "*"
+  }
+}
