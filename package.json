@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "poison": "~1.0.0",
-    "unilog": "~0.0.2"
+    "unilog": "~0.0.3"
   },
   "devDependencies": {
     "debug": "~0.7.4",
