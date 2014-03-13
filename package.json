@@ -1,6 +1,6 @@
 {
   "name": "unilog-nexus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Aggregates debug, nlogger and console output into unilog.",
   "keywords": [
     "log",
@@ -28,6 +28,6 @@
   "main": "lib/index.js",
   "dependencies": {
     "poison": "~1.0.0",
-    "unilog": "*"
+    "unilog": "0.x"
   }
 }

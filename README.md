@@ -4,10 +4,10 @@ unilog-nexus
 Aggregates [debug](https://github.com/visionmedia/debug), [nlogger](https://github.com/igo/nlogger) and
 [console](http://nodejs.org/api/stdio.html) output into the [unilog](https://github.com/fluidsonic/unilog) node.js module.
 
-node.js projects rely on plenty of modules and many of them use distinct logging facilities.
+node.js projects rely on plenty of modules and many of them use distinct log facilities.
 Having a unified log output is difficult and configuring the log output is even worse.
 
-[unilog](https://github.com/fluidsonic/unilog) aims to unify logging and *unilog-nexus* allows you to redirect the log output of some well-known logging modules into unilog.
+[unilog](https://github.com/fluidsonic/unilog) aims to unify logging and *unilog-nexus* allows you to redirect the log output of some well-known log modules into unilog.
 
 **It's just a single line of code!**
 
@@ -16,7 +16,7 @@ Having a unified log output is difficult and configuring the log output is even 
 Quickstart
 ----------
 
-Put this code at the very beginning of your node.js project to ensure that all other logging libraries are correctly hooked.
+Put this code at the very beginning of your node.js project to ensure that all supported log libraries are correctly hooked.
 
 ```javascript
 require('unilog-nexus')();
@@ -26,7 +26,7 @@ require('unilog-nexus')();
 Configuration
 -------------
 
-You can disable specific redirectors if you want to.
+You can disable hooking of specific libraries if you want to.
 
 ```javascript
 require('unilog-nexus')({
@@ -99,16 +99,15 @@ Installation
 Contribute!
 -----------
 
-Support this project by providing redirector implementations for even more node.js logging modules.
+Support this project by providing redirector implementations for even more node.js log modules.
 
 
 
 To-Do
 -----
 
-- allow configuration of redirectors
-- implement more redirectors
-- add tests
+- Add support for `util.debuglog()` and the `debuglog` module.
+- Implement even more redirectors.
 
 
 
