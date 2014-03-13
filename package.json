@@ -1,6 +1,6 @@
 {
   "name": "unilog-nexus",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Aggregates debug, nlogger and console output into unilog.",
   "keywords": [
     "log",
@@ -26,8 +26,20 @@
     "url": "https://github.com/fluidsonic/unilog-nexus.git"
   },
   "main": "lib/index.js",
+  "scripts": {
+    "test": "node test/helpers/runner"
+  },
   "dependencies": {
     "poison": "~1.0.0",
-    "unilog": "0.x"
+    "unilog": "~0.0.2"
+  },
+  "devDependencies": {
+    "debug": "~0.7.4",
+    "expect.js": "~0.3.1",
+    "istanbul": "~0.2.6",
+    "mocha": "~1.17.1",
+    "mocha-lcov-reporter": "~0.0.1",
+    "nlogger": "~0.4.0",
+    "rimraf": "~2.2.6"
   }
 }
