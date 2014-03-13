@@ -2,7 +2,7 @@
 
 // we need each test file to run in a new process because unilog-nexus can only be set up once
 
-// you can add additional mocha options: node test\helpers\runner.js --grep "console"
+// you can add additional mocha options: node test\helpers\runner --grep "console"
 
 var ChildProcess = require('child_process');
 var File = require('fs');
@@ -62,10 +62,10 @@ function finish(error, exitCode) {
 
 
 function createFileReport(exitCode, done) {
-	var args = ['report', 'lcov', '--root', childCoveragePath];
+	var args = [istanbulPath, 'report', 'lcov', '--root', childCoveragePath];
 
-	// console.log('> (fork) \'' + istanbulPath + '\' \'' + args.join('\' \'') + '\'');
-	var child = ChildProcess.fork(istanbulPath, args, {
+	// console.log('> (spawn) \'' + process.execPath + '\' \'' + args.join('\' \'') + '\'');
+	var child = ChildProcess.spawn('node', args, {
 		stdio: 'inherit',
 	});
 	child.on('error', done);
@@ -80,10 +80,10 @@ function createFileReport(exitCode, done) {
 
 
 function createTextReport(exitCode, done) {
-	var args = ['report', 'text-summary', '--root', childCoveragePath];
+	var args = [istanbulPath, 'report', 'text-summary', '--root', childCoveragePath];
 
-	// console.log('> (fork) \'' + istanbulPath + '\' \'' + args.join('\' \'') + '\'');
-	var child = ChildProcess.fork(istanbulPath, args, {
+	// console.log('> (spawn) \'' + process.execPath + '\' \'' + args.join('\' \'') + '\'');
+	var child = ChildProcess.spawn(process.execPath, args, {
 		stdio: 'inherit',
 	});
 	child.on('error', done);
@@ -133,6 +133,7 @@ function runTestFiles(testFiles, done) {
 		++testNumber;
 
 		var args = [
+			istanbulPath,
 			'cover',
 			'--dir', Path.join(childCoveragePath, String(testNumber)),
 			'--root', projectPath,
@@ -145,8 +146,8 @@ function runTestFiles(testFiles, done) {
 		args = args.concat(process.argv.slice(2));
 		args.push(testFile);
 
-		// console.log('> (fork) \'' + istanbulPath + '\' \'' + args.join('\' \'') + '\'');
-		var child = ChildProcess.fork(istanbulPath, args, {
+		// console.log('> (spawn) \'' + process.execPath + '\' \'' + args.join('\' \'') + '\'');
+		var child = ChildProcess.spawn(process.execPath, args, {
 			stdio: 'inherit',
 		});
 		child.on('error', done);
