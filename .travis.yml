@@ -4,6 +4,6 @@ node_js:
   - "0.10"
   - "0.11"
 before_script:
-  - npm install coveralls
+  - npm install git://github.com/fluidsonic/node-coveralls.git#fix-absolute-paths
 after_success:
   - coveralls < ./coverage/lcov.info
