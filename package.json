@@ -1,6 +1,6 @@
 {
   "name": "unilog-nexus",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Aggregates debug, nlogger and console output into unilog.",
   "keywords": [
     "log",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "poison": "~1.0.0",
-    "unilog": "~0.0.3"
+    "unilog": "~0.1.0"
   },
   "devDependencies": {
     "debug": "~0.7.4",
