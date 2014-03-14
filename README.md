@@ -101,6 +101,14 @@ Installation
 
 
 
+Testing
+-------
+
+	$ npm install
+	$ npm test
+
+
+
 Contribute!
 -----------
 
@@ -111,6 +119,7 @@ Support this project by providing redirector implementations for even more node.
 To-Do
 -----
 
+- Only run each redirector at most once.
 - Add support for `util.debuglog()` and the `debuglog` module.
 - Implement even more redirectors.
 
