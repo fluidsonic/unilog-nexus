@@ -2,9 +2,9 @@ unilog-nexus
 ============
 
 [![Build Status](https://travis-ci.org/fluidsonic/unilog-nexus.png?branch=master)](https://travis-ci.org/fluidsonic/unilog-nexus)
+[![Coverage Status](https://coveralls.io/repos/fluidsonic/unilog-nexus/badge.png)](https://coveralls.io/r/fluidsonic/unilog-nexus)
 [![Dependency Status](https://gemnasium.com/fluidsonic/unilog-nexus.png)](https://gemnasium.com/fluidsonic/unilog-nexus)
 [![Code Climate](https://codeclimate.com/github/fluidsonic/unilog-nexus.png)](https://codeclimate.com/github/fluidsonic/unilog-nexus)
-[![dependencies](https://sourcegraph.com/api/repos/github.com/fluidsonic/unilog-nexus/badges/dependencies.png)](https://sourcegraph.com/github.com/fluidsonic/unilog-nexus)
 
 Aggregates [debug](https://github.com/visionmedia/debug), [nlogger](https://github.com/igo/nlogger) and
 [console](http://nodejs.org/api/stdio.html) output into the [unilog](https://github.com/fluidsonic/unilog) node.js module.
